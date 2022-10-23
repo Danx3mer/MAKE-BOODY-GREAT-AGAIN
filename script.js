@@ -7,6 +7,7 @@ function addBlueParticle() {
     fs.style.height = Math.random() * 50 + 25 + 'vh'
     fs.style.transform = 'skew(' + skew + 'deg)'
     fs.style.right = 30 + Math.random() * 40 + '%'
+
     var p = document.createElement('div')
     p.className = 'particle'
     p.style.background = blueColors[Math.floor(Math.random()*blueColors.length)]
@@ -14,6 +15,7 @@ function addBlueParticle() {
         this.removeEventListener(null,null)
         fs.remove()
     }
+
     document.getElementById('welcomeDiv').appendChild(fs).appendChild(p)
 }
 
@@ -24,6 +26,7 @@ function addRedParticle() {
     fs.style.height = Math.random() * 50 + 25 + 'vh'
     fs.style.transform = 'skew(' + skew + 'deg)'
     fs.style.left = Math.random() * 40 - 20 + '%'
+
     var p = document.createElement('div')
     p.className = 'particle'
     p.style.background = redColors[Math.floor(Math.random()*redColors.length)]
@@ -31,6 +34,7 @@ function addRedParticle() {
         this.removeEventListener(null,null)
         fs.remove()
     }
+    
     document.getElementById('welcomeDiv').appendChild(fs).appendChild(p)
 }
 
