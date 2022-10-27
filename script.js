@@ -1,13 +1,12 @@
-const blueColors = ['blue', 'aquamarine', 'darkblue'], redColors = ['darkorange', 'tomato', 'red'], fire_spread = 45
+const blueColors = ['blue', 'aquamarine', 'darkblue'], redColors = ['darkorange', 'tomato', 'red'], fire_spread = 16
 
 function addBlueParticle() {
     var fs = document.createElement('div'),
     skew = Math.random() < .5 ? Math.random() * fire_spread : -Math.random() * fire_spread
     fs.className = 'fire_shaft'
-    fs.style.height = Math.random() * 50 + 25 + 'vh'
+    fs.style.height = Math.random() * 75 + '%'
     fs.style.transform = 'skew(' + skew + 'deg)'
-    fs.style.right = 30 + Math.random() * 40 + '%'
-
+    fs.style.right = 50 + Math.random()*46 + '%'
     var p = document.createElement('div')
     p.className = 'particle'
     p.style.background = blueColors[Math.floor(Math.random()*blueColors.length)]
@@ -15,7 +14,6 @@ function addBlueParticle() {
         this.removeEventListener(null,null)
         fs.remove()
     }
-
     document.getElementById('welcomeDiv').appendChild(fs).appendChild(p)
 }
 
@@ -23,10 +21,9 @@ function addRedParticle() {
     var fs = document.createElement('div'),
     skew = Math.random() < .5 ? Math.random() * fire_spread : -Math.random() * fire_spread
     fs.className = 'fire_shaft'
-    fs.style.height = Math.random() * 50 + 25 + 'vh'
+    fs.style.height = Math.random() *75 + '%'
     fs.style.transform = 'skew(' + skew + 'deg)'
-    fs.style.left = Math.random() * 40 - 20 + '%'
-
+    fs.style.right = Math.random()*46 + '%'
     var p = document.createElement('div')
     p.className = 'particle'
     p.style.background = redColors[Math.floor(Math.random()*redColors.length)]
@@ -34,7 +31,6 @@ function addRedParticle() {
         this.removeEventListener(null,null)
         fs.remove()
     }
-    
     document.getElementById('welcomeDiv').appendChild(fs).appendChild(p)
 }
 
